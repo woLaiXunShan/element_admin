@@ -1,15 +1,5 @@
 <template>
   <div class="bgfff p10">
-    <div>
-      <el-radio-group v-model="column" size="medium">
-        <el-radio-button :label="0">所有</el-radio-button>
-        <el-radio-button :label="1" >评估</el-radio-button>
-        <el-radio-button :label="2">待放款</el-radio-button>
-        <el-radio-button :label="3">待结账</el-radio-button>
-        <el-radio-button :label="4">待送审</el-radio-button>
-        <el-radio-button :label="5">待送审</el-radio-button>
-      </el-radio-group>
-    </div>
     <div class="flex one_sift mt10">
       <div class="flex">
         <el-select v-model="selectType_" clearable placeholder="请选择" style="width:120px;margin-right: 10px;">
@@ -39,20 +29,12 @@
         <el-button type="primary" plain @click="advancedSeek = true">高级查找</el-button>
       </div>
     </div>
-    <!-- 订单&&协议公共筛选条件配置 -->
-    <OrderCondition/>
-
-    <div class="mt10 mb10" style="text-align:right;">
-      <el-button type="primary" size="mini" @click="allocation_">分配</el-button>
-      <el-button type="primary" size="mini" @click="$refs.orderTableHead.init()">配置表格</el-button>
-    </div>
-    <!-- 配置订单&&协议表头 -->
-    <OrderTableHead ref="orderTableHead"/>
     <!-- 表格 -->
     <el-table
       :data="tableData"
       border
       style="width: 100%"
+      class="mt20"
       @sort-change="sortChange"
       @row-dblclick="dblclick"
       @selection-change="selectionChange">
@@ -110,23 +92,10 @@
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"/>
 
-    <!-- 高级查找 -->
-    <el-dialog :visible.sync="advancedSeek" :modal-append-to-body="false">
-      <AdvancedSeek/>
-    </el-dialog>
-    <!-- 分配 -->
-    <AllocationBox ref="allocation"/>
   </div>
 </template>
 <script>
-import AdvancedSeek from '@/views/components/AdvancedSeek'
-import AllocationBox from '@/views/components/AllocationBox'
-import OrderCondition from '@/views/components/OrderCondition'
-import OrderTableHead from '@/views/components/OrderTableHead'
 export default {
-  components: {
-    AdvancedSeek, AllocationBox, OrderCondition, OrderTableHead
-  },
   data() {
     return {
       page: {
@@ -192,13 +161,6 @@ export default {
     }
   },
   methods: {
-    allocation_() { // 分配
-      if (this.selectList.length) {
-        this.$refs.allocation.init()
-      } else {
-        this.$message.error('请选择需要分配的数据')
-      }
-    },
     selectionChange(selection) { // 多选选项变化
       this.selectList = selection
     },

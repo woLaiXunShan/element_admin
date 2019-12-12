@@ -1,7 +1,0 @@
-export { default as Base_ } from './Base'
-export { default as Customer } from './Customer'
-export { default as Asset } from './Asset'
-export { default as Management } from './Management'
-export { default as Accessory } from './Accessory'
-export { default as Proceeds } from './Proceeds'
-export { default as Cost } from './Cost'

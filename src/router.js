@@ -48,24 +48,6 @@ export default new Router({
           title: '订单列表'
         }
       },
-      {
-        path: 'assessList/:id',
-        component: () => import('@/views/order/AssessList'),
-        name: 'assessList',
-        hidden: true, // 隐藏左侧菜单
-        meta: {
-          title: '评估列表'
-        }
-      },
-      {
-        path: 'orderDetail/:id',
-        component: () => import('@/views/order/detail'),
-        name: 'orderDetail',
-        hidden: true, // 隐藏左侧菜单
-        meta: {
-          title: '订单详情'
-        }
-      }
       ]
     },
   ]
