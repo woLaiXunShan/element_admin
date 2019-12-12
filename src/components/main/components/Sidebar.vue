@@ -6,6 +6,8 @@
       background-color="rgb(4, 18, 31)"
       text-color="#fff"
       active-text-color="#ffd04b"
+      :collapse="isCollapse"
+      :collapse-transition="false"
     >
       <template v-for="(item, index) in routes">
         <el-submenu v-if="item.name!=='home_' && item.name!=='login'" :key="index" :index="`${index}`">
@@ -30,6 +32,9 @@ export default {
   computed: {
     routes () {
       return this.$router.options.routes
+    },
+    isCollapse () {
+      return this.$store.state.isCollapse
     }
   }
 }

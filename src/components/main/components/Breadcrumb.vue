@@ -2,7 +2,7 @@
   <el-breadcrumb class="app-breadcrumb" separator="/">
     <transition-group name="breadcrumb">
       <el-breadcrumb-item v-for="item in levelList" :key="item.path">
-        <router-link v-if="item.name==='home'" :to="item.path">{{ item.meta.title }}</router-link>
+        <router-link v-if="item.name==='home'" :to="item.path" style="color:#fff;">{{ item.meta.title }}</router-link>
         <span v-else>{{ item.meta.title }}</span>
       </el-breadcrumb-item>
     </transition-group>

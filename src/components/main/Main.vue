@@ -1,8 +1,9 @@
 <template>
   <el-container style="height:100vh;">
-    <el-aside width="240px" style="background-color: rgb(4, 18, 31);">
+    <el-aside  :style="{'width': isCollapse?'64px':'15%'}" :class="{'navBox':!isCollapse}" style="background-color: rgb(4, 18, 31);">
       <div class="logo center">
-        <img src="~@img/logo.png" alt="">
+        <img v-if="!isCollapse" src="~@img/logo.png" alt="">
+        <img v-else src="~@img/Y.png" alt="">
       </div>
       <Sidebar></Sidebar>
     </el-aside>
@@ -24,6 +25,11 @@ import { Sidebar, Navbar, Tags } from './components'
 export default {
   components: {
     Sidebar, Navbar, Tags
+  },
+  computed: {
+    isCollapse () {
+      return this.$store.state.isCollapse
+    }
   }
 }
 </script>
@@ -36,6 +42,10 @@ export default {
   img{
     vertical-align: middle;
   }
+}
+.navBox{
+  max-width: 240px;
+  min-width: 200px;
 }
 .header_{
   height: 60px;

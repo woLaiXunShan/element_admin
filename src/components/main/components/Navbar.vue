@@ -1,7 +1,7 @@
 <template>
   <div class="main flex justify">
     <div class="flex align_items">
-      <i class="el-icon-s-unfold fs26 cursor mr20"></i>
+      <i @click="$store.commit('IS_COLLAPSE', !isCollapse)" :class="[isCollapse?'el-icon-s-unfold':'el-icon-s-fold']" class="el-icon-s-unfold fs26 cursor mr20"></i>
       <Breadcrumb></Breadcrumb>
     </div>
     <div class="flex align_items">
@@ -27,6 +27,11 @@ import Breadcrumb from './Breadcrumb'
 export default {
   components: {
     Breadcrumb
+  },
+  computed: {
+    isCollapse () {
+      return this.$store.state.isCollapse
+    }
   },
   methods: {
     handleCommand (command) {
