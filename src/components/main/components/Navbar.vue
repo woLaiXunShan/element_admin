@@ -5,10 +5,6 @@
       <Breadcrumb></Breadcrumb>
     </div>
     <div class="flex align_items">
-      <p class="flex align_items">
-        <img src="~@img/xi_tong_xiao_xi.png" alt class="xiao_xi mr30">
-      </p>
-      <img src="~@img/ke_hu.png" alt class="user-img mr10">
       <el-dropdown trigger="click" placement="top" @command="handleCommand">
         <span class="user-name el-dropdown-link">
           <i class="el-icon-arrow-down el-icon--right colfff"/>

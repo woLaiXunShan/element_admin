@@ -15,7 +15,6 @@
           clearable
           style="width:200px;margin-right: 10px;"/>
         <el-button icon="el-icon-search" circle style="margin-right: 10px;"/>
-        <img src="~@img/ren_yuan_1.png" class="ren_yuan_1" alt="">
       </div>
       <div class="flex">
         <el-select v-model="selectType_" clearable placeholder="请选择" style="width:120px;margin-right: 10px;">
