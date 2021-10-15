@@ -1,6 +1,5 @@
 import axios from 'axios'
 import qs from 'qs'
-axios.defaults.withCredentials = true // 允许请求携带cookie
 // 创建axios实例
 const Axios = axios.create({
   baseURL: 'http://39.100.78.143:8084/', // api的base_url

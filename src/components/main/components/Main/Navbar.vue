@@ -1,10 +1,10 @@
 <template>
-  <div class="main flex justify">
-    <div class="flex align_items">
+  <div class="main flex flex_just_betw">
+    <div class="flex flex_cen">
       <i @click="$store.commit('IS_COLLAPSE')" :class="[isCollapse?'el-icon-s-unfold':'el-icon-s-fold']" class="el-icon-s-unfold fs26 cursor mr20"></i>
       <Breadcrumb></Breadcrumb>
     </div>
-    <div class="flex align_items">
+    <div class="flex flex_cen">
       <el-dropdown trigger="click" placement="top" @command="handleCommand">
         <span class="user-name el-dropdown-link">
           <i class="el-icon-arrow-down el-icon--right colfff"/>

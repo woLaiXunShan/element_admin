@@ -11,3 +11,12 @@
 .el-breadcrumb__inner.is-link:hover{
   color: #409EFF !important;
 }
+.el-submenu__title:hover{
+  background-color: #409EFF !important;
+  .el-icon-tickets, .el-submenu__icon-arrow {
+    color: #fff !important;
+  }
+}
+.el-menu-item:focus, .el-menu-item:hover{
+  background-color: #409EFF !important;
+}

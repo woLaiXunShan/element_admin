@@ -21,7 +21,7 @@
   </el-container>
 </template>
 <script>
-import { Sidebar, Navbar, Tags } from './components'
+import { Sidebar, Navbar, Tags } from './components/Main'
 export default {
   components: {
     Sidebar, Navbar, Tags
