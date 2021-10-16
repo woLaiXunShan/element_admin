@@ -32,7 +32,7 @@ export default new Router({
     },
     // 订单管理
     {
-      path: '/order',
+      path: '',
       component: Main,
       redirect: 'noredirect',
       name: 'order',

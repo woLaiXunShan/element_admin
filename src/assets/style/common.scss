@@ -137,9 +137,6 @@
 .fs30 {
   font-size: 30px;
 }
-.colfff{
-  color: #fff;
-}
 .cursor{
   cursor: pointer;
 }
@@ -180,6 +177,10 @@
 	display: flex;
 	align-items: center;
 }
+.flex_cen_cen{
+	display: flex;
+	align-items: center;
+}
 //颜色
 .blue {
   color: #1976d2;
@@ -191,10 +192,19 @@
   color: #ff002f;
 }
 
-.bgfff {
+.bgf {
   background-color: #fff;
 }
-.colf{
+.col333{
+  color: #333;
+}
+.col666{
+  color: #666;
+}
+.col999{
+  color: #999;
+}
+.colfff{
   color: #fff;
 }
 

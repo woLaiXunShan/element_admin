@@ -13,7 +13,7 @@
       </el-header>
       <Tags></Tags>
       <el-main style="background-color: #ebf0f5;">
-        <div style="min-width:1200px;">
+        <div class="bgf">
           <router-view/>
         </div>
       </el-main>
